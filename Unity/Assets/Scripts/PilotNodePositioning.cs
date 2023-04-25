@@ -12,7 +12,7 @@ public class PilotNodePositioning : MonoBehaviour
     [Tooltip("The speed at which the orb rotates")] public float rotateSpeed = 10;
     [Tooltip("+1 for clockwise rotation, -1 for counterclockwise rotation")] public int rotDirection = 1;
     [Tooltip("The distance relative to the parent boid to hover at")] public Vector3 offsetPos;
-    private bool isControlled = false; //Whether the player is controlling this node
+    public bool isControlled = false; //Whether the player is controlling this node
     [Tooltip("The cooldown between exiting a node and being able to re-control it")] public float controlCooldown = 3;
     private float controlTimer = 0;
     public KeyCode exitKey = KeyCode.Z;
