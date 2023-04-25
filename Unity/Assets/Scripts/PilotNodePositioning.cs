@@ -43,20 +43,20 @@ public class PilotNodePositioning : MonoBehaviour
         {
             isControlled = true;
             playerController.speed = 0;
-            player.transform.position = new Vector3(Mathf.Lerp(player.transform.position.x, myPos.position.x, 0.2f), Mathf.Lerp(player.transform.position.y, myPos.position.y, 0.2f), Mathf.Lerp(player.transform.position.z, myPos.position.z, 0.2f));
+            player.transform.position = new Vector3(Mathf.Lerp(player.transform.position.x, myPos.position.x, 0.2f), Mathf.Lerp(player.transform.position.y, myPos.position.y, 0.1f), Mathf.Lerp(player.transform.position.z, myPos.position.z, 0.2f));
             //player.gameObject.transform.rotation = Quaternion.RotateTowards(player.gameObject.transform.rotation, boidParent.gameObject.transform.rotation, 90 * Time.deltaTime);
         }
 
         if(isControlled)
         {
-            if(Input.GetKeyDown(KeyCode.Z))
+            if(Input.GetKeyDown(exitKey))
             {
-                isControlled = false;
                 controlTimer = controlCooldown;
+                isControlled = false;
                 playerController.speed = 50;
             }
         }
 
-        controlCooldown -= Time.deltaTime;
+        controlTimer -= Time.deltaTime;
     }
 }
