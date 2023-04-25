@@ -721,6 +721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ddddef66de90d545949d27cecef224b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  reticle: {fileID: 2022851070}
   rotateSpeed: 10
   rotDirection: 1
   offsetPos: {x: 0, y: 2, z: 0}

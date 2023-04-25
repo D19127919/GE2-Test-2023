@@ -8,6 +8,7 @@ public class PilotNodePositioning : MonoBehaviour
     private Transform myPos;
     private Camera player;
     private FPSController playerController;
+    public GameObject reticle;
 
     [Tooltip("The speed at which the orb rotates")] public float rotateSpeed = 10;
     [Tooltip("+1 for clockwise rotation, -1 for counterclockwise rotation")] public int rotDirection = 1;
@@ -57,5 +58,7 @@ public class PilotNodePositioning : MonoBehaviour
         }
 
         controlTimer -= Time.deltaTime;
+
+        reticle.SetActive(!isControlled);
     }
 }
