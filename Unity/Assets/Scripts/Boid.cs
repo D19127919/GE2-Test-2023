@@ -19,6 +19,8 @@ public class Boid : MonoBehaviour
     public float maxSpeed = 5.0f;
     public float maxForce = 10.0f;
 
+    public bool isTranqued = false;
+
     public void OnDrawGizmos()
     {
         Gizmos.color = Color.blue;
@@ -106,6 +108,11 @@ public class Boid : MonoBehaviour
         velocity += acceleration * Time.deltaTime;
 
         velocity = Vector3.ClampMagnitude(velocity, maxSpeed);
+
+        if(isTranqued)
+        {
+            velocity = Vector3.zero;
+        }
         
         if (velocity.magnitude > 0)
         {

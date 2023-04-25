@@ -37,7 +37,6 @@ public class PilotNodePositioning : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //myPos.Rotate(0, rotateSpeed * Time.deltaTime, 0);
 
         if(Vector3.Distance(player.transform.position, myPos.position) < snapDistance && controlTimer <= 0)
         {

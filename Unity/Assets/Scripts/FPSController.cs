@@ -95,10 +95,6 @@ public class FPSController : MonoBehaviour
         {
             Fly(Time.deltaTime * speed);
         }
-        if (Input.GetKey(KeyCode.F))
-        {
-            Fly(-Time.deltaTime * speed);
-        }
 
         if (Input.GetKey(KeyCode.Joystick1Button5))
         {
